@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Search, ChefHat } from 'lucide-react';
+import { Search} from 'lucide-react';
 import api from '../api/axios';
 import RecipeCard from '../components/RecipeCard';
 
@@ -39,9 +39,6 @@ const Home = () => {
       {/* Hero */}
       <div className="text-center mb-10">
         <div className="flex justify-center mb-4">
-          <div className="bg-orange-100 p-4 rounded-full">
-            <ChefHat size={40} className="text-orange-500" />
-          </div>
         </div>
         <h1 className="text-4xl font-bold text-gray-800 mb-3">Discover Amazing Recipes</h1>
         <p className="text-gray-500 text-lg max-w-xl mx-auto">
@@ -103,7 +100,6 @@ const Home = () => {
         </div>
       ) : recipes.length === 0 ? (
         <div className="text-center py-20 text-gray-400">
-          <ChefHat size={48} className="mx-auto mb-4 opacity-30" />
           <p className="text-lg">No recipes found. Try a different search or category.</p>
         </div>
       ) : (
