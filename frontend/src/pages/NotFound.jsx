@@ -1,10 +1,8 @@
 import { Link } from 'react-router-dom';
-import { ChefHat } from 'lucide-react';
 
 const NotFound = () => (
   <div className="min-h-[60vh] flex flex-col items-center justify-center text-center px-4">
     <div className="bg-orange-100 p-5 rounded-full mb-6">
-      <ChefHat size={48} className="text-orange-400" />
     </div>
     <h1 className="text-6xl font-bold text-gray-200 mb-2">404</h1>
     <h2 className="text-2xl font-bold text-gray-700 mb-2">Page Not Found</h2>

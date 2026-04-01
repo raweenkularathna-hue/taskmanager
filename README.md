@@ -1,26 +1,57 @@
-**Task Manager Application Overview:The task manager application is designed to help users efficiently manage their tasks and responsibilities by providing a user-friendly interface for creating, viewing, updating, and deleting tasks. It includes essential features such as secure user authentication, allowing individuals to sign up and log in to their accounts, as well as profile management to update personal information. With built-in validation such as input field validation and email validation, the application ensures a seamless user experience while enhancing productivity and organization in both personal and professional settings. **
+# Recipe Share - MERN Stack Application
 
-**This apps **contain** the following features:**
+A full-stack Recipe Sharing Platform built with MongoDB, Express, React, and Node.js.
 
-* Signup
-* Login
-* Logout
-* Update profile
-* Add tasks
-* View tasks
-* Update tasks
-* Delete tasks
+## Features
+- User authentication (JWT) with role-based access (admin / user)
+- Browse, search, and filter approved recipes
+- Full recipe detail view with ingredients and step-by-step instructions
+- User profile management (edit name, email, change password)
+- Submit, edit, and delete your own recipes
+- Admin dashboard with stats, category distribution, top contributors
+- Admin recipe management: approve, reject, delete any recipe
 
-**This **app**lication** is**almost **a** precompiled** app**. However, students will develop some features,**such as adding tasks, viewing tasks, updating tasks, and **deleting** tasks**. **Students** will interact with GitHub when they develop the features.**
+## Demo Accounts (after seeding)
+| Role  | Email               | Password  |
+|-------|---------------------|-----------|
+| Admin | admin@recipe.com    | admin123  |
+| User  | sarah@recipe.com    | user123   |
+| User  | mike@recipe.com     | user123   |
 
----
+## Project Structure
+```
+recipe-share/
+├── backend/          # Node.js + Express + MongoDB API
+└── frontend/         # React 18 + Tailwind CSS
+```
 
-**Prerequisite:** Please install the following software and create account in following web tools** **
+## Quick Start
 
-* **Nodejs [**[https://nodejs.org/en](https://nodejs.org/en)]** **
-* **Git [**[https://git-scm.com/](https://git-scm.com/)]** **
-* **VS code editor** [[https://code.visualstudio.com/](https://code.visualstudio.com/)]** **
-* **MongoDB Account** [[https://account.mongodb.com/account/login](https://account.mongodb.com/account/login)]** - In tutorial, we have also showed how can you create account and database: follow step number 2.**
-* **GitHub Account** [[https://github.com/signup?source=login](https://github.com/signup?source=login)]** **
+### 1. Install dependencies
+```bash
+npm run install-all
+```
 
----
+### 2. Configure environment
+```bash
+cp backend/.env.example backend/.env
+# Edit backend/.env and set MONGO_URI and JWT_SECRET
+```
+
+### 3. Seed the database
+```bash
+npm run seed
+```
+
+### 4. Run the app
+```bash
+npm start
+```
+
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:5001
+
+## Tech Stack
+- **Frontend**: React 18, React Router v6, Tailwind CSS, Lucide React, Axios
+- **Backend**: Node.js, Express, Mongoose, JWT, bcrypt
+- **Database**: MongoDB
