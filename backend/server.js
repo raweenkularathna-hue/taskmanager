@@ -24,7 +24,7 @@ app.get('/', (req, res) => res.send('Recipe Share API is running'));
 
 if (require.main === module) {
   connectDB();
-  const PORT = process.env.PORT || 5000;
+  const PORT = process.env.PORT || 5001;
   app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 }
 
